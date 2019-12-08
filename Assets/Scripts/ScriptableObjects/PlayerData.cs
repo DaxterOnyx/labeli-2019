@@ -10,4 +10,9 @@ public class PlayerData : ScriptableObject
     public float sprintSpeed;
     public string HorizontalAxisName;
     public string VerticalAxisName;
+	public float jumpForce;
+	public float TimeJumpBeforeGrounded;
+	public float TimeJumpAfterGrounded;
+
+	public LayerMask PlateformLayer;
 }
