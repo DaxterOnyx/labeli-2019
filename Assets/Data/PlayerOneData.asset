@@ -16,3 +16,9 @@ MonoBehaviour:
   sprintSpeed: 0
   HorizontalAxisName: HorizontalOne
   VerticalAxisName: VerticalOne
+  jumpForce: 1
+  TimeJumpBeforeGrounded: 0
+  TimeJumpAfterGrounded: 0
+  PlateformLayer:
+    serializedVersion: 2
+    m_Bits: 0

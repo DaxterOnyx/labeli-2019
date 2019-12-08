@@ -13,6 +13,12 @@ MonoBehaviour:
   m_Name: PlayerTwoData
   m_EditorClassIdentifier: 
   walkSpeed: 2000
-  sprintSpeed: 0
+  sprintSpeed: 1.95
   HorizontalAxisName: HorizontalTwo
   VerticalAxisName: 
+  jumpForce: 325.52
+  TimeJumpBeforeGrounded: 10
+  TimeJumpAfterGrounded: 10
+  PlateformLayer:
+    serializedVersion: 2
+    m_Bits: 256

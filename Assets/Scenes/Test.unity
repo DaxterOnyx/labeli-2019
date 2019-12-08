@@ -176,7 +176,7 @@ GameObject:
   - component: {fileID: 977078600}
   - component: {fileID: 977078599}
   - component: {fileID: 977078601}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1175,6 +1175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 8727b515ce803a2468ff960a4c9db70d, type: 2}
+  GroundCheckPosition: {x: 0, y: 0}
 --- !u!1 &2072327429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1208,6 +1209,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 83b4ab365b8507b40ad804814e7bbb11, type: 2}
+  GroundCheckPosition: {x: 0, y: 0}
 --- !u!50 &2072327431
 Rigidbody2D:
   serializedVersion: 4
