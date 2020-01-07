@@ -13,6 +13,11 @@ public class PlayerData : ScriptableObject
 	public float jumpForce;
 	public float TimeJumpBeforeGrounded;
 	public float TimeJumpAfterGrounded;
-
+    public bool crouch;
+    public bool punch;
+    //TODO : Animator and remove Sprite system
+    public Sprite crouchSprite;
+    public Sprite punchSprite;
+    //TODO : Punch level and wallbreak
 	public LayerMask PlateformLayer;
 }
