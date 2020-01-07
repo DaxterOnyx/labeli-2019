@@ -897,8 +897,8 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -11, y: -6, z: 0}
-  m_Size: {x: 21, y: 12, z: 1}
+  m_Origin: {x: -11, y: -9, z: 0}
+  m_Size: {x: 21, y: 15, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1063,7 +1063,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 4
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 64
@@ -1176,6 +1176,39 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 8727b515ce803a2468ff960a4c9db70d, type: 2}
   GroundCheckPosition: {x: 0, y: 0}
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0041656494
+      value: 0.50588226
+      inSlope: 0.30546314
+      outSlope: 0.30546314
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.6635319
+      value: 0.70729434
+      inSlope: Infinity
+      outSlope: -0.37991753
+      tangentMode: 1
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.8761273
+    - serializedVersion: 3
+      time: 1.0000143
+      value: 1.0070589
+      inSlope: Infinity
+      outSlope: Infinity
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2072327429
 GameObject:
   m_ObjectHideFlags: 0
@@ -1210,6 +1243,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   data: {fileID: 11400000, guid: 83b4ab365b8507b40ad804814e7bbb11, type: 2}
   GroundCheckPosition: {x: 0, y: 0}
+  curve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!50 &2072327431
 Rigidbody2D:
   serializedVersion: 4
@@ -1226,7 +1265,7 @@ Rigidbody2D:
   m_LinearDrag: 1
   m_AngularDrag: 0.05
   m_GravityScale: 64
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 784d85436f4111f48a481d1bae8cfaee, type: 2}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1

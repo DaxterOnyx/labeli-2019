@@ -10,6 +10,7 @@ public class PlayerMove : MonoBehaviour
 	private float jumpPressedRememberTime;
 	public Vector2 GroundCheckPosition;
 	private float groundedRemember;
+    public AnimationCurve curve;
 
 	private void Start()
 	{
