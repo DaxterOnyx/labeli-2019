@@ -12,13 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da17cd786969774f8c4b47f63b7e069, type: 3}
   m_Name: PlayerTwoData
   m_EditorClassIdentifier: 
-  walkSpeed: 400
+  walkSpeed: 8
   sprintSpeed: 1.95
   HorizontalAxisName: HorizontalTwo
   VerticalAxisName: VerticalTwo
-  jumpForce: 325.52
-  TimeJumpBeforeGrounded: 10
-  TimeJumpAfterGrounded: 10
+  jumpForce: 7
+  TimeJumpBeforeGrounded: 0.2
+  TimeJumpAfterGrounded: 0.2
+  AirControlRatio: 0.5
   PlateformLayer:
     serializedVersion: 2
     m_Bits: 256

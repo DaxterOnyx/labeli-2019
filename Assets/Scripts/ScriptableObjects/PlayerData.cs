@@ -13,6 +13,7 @@ public class PlayerData : ScriptableObject
 	public float jumpForce;
 	public float TimeJumpBeforeGrounded;
 	public float TimeJumpAfterGrounded;
+	public float AirControlRatio;
 
 	public LayerMask PlateformLayer;
 }
