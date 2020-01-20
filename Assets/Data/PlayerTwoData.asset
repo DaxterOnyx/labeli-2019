@@ -16,10 +16,14 @@ MonoBehaviour:
   sprintSpeed: 1.95
   HorizontalAxisName: HorizontalTwo
   VerticalAxisName: VerticalTwo
-  jumpForce: 7
+  jumpForce: 10
   TimeJumpBeforeGrounded: 0.2
   TimeJumpAfterGrounded: 0.2
   AirControlRatio: 0.5
+  crouch: 0
+  punch: 0
+  crouchSprite: {fileID: 0}
+  punchSprite: {fileID: 0}
   PlateformLayer:
     serializedVersion: 2
     m_Bits: 256
