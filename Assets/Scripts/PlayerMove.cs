@@ -7,15 +7,16 @@ public class PlayerMove : MonoBehaviour
 	private float x;
 	private float y;
 	new Rigidbody2D rigidbody;
+	new Collider2D collider;
 	private float jumpPressedRememberTime;
 	private float groundedRemember;
 	private bool grounded;
-	public AnimationCurve curve;
 
 	private void Start()
 	{
 		grounded = true;
 		rigidbody = GetComponent<Rigidbody2D>();
+		collider = GetComponent<Collider2D>();
 	}
 
 	void Update()
@@ -27,7 +28,7 @@ public class PlayerMove : MonoBehaviour
 
 		//TODO analogic jump
 		jumpPressedRememberTime -= deltaTime;
-		if (Input.GetButtonDown("Jump"))
+		if (Input.GetAxis(data.VerticalAxisName) > 0)
 			jumpPressedRememberTime = data.TimeJumpBeforeGrounded;
 
 		groundedRemember -= deltaTime;
@@ -50,15 +51,23 @@ public class PlayerMove : MonoBehaviour
 
 	private void OnCollisionEnter2D(Collision2D collision)
 	{
-		if (collision.collider.CompareTag("Plateform") && collision.GetContact(0).point.y < transform.position.y) {
-			Debug.Log("I'm grounded.");
-			grounded = true;
+		if (!grounded && collision.collider.CompareTag("Plateform")) {
+			float v = (transform.position.y + collider.offset.y - ((CapsuleCollider2D)collider).size.y / 3);
+			var c = collision.contacts;
+			var count = collision.contactCount;
+			for (int i = 0; i < count; i++) {
+				if (c[i].point.y < v) {
+					Debug.Log("I'm grounded." + collision.GetContact(0).point.y);
+					grounded = true;
+					return;
+				}
+			}
 		}
 	}
 
 	private void OnCollisionExit2D(Collision2D collision)
 	{
-		if (collision.collider.CompareTag("Plateform") ) {
+		if (grounded && collision.collider.CompareTag("Plateform")) {
 			Debug.Log("I'm no more grounded.");
 			grounded = false;
 		}
