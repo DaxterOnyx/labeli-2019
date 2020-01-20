@@ -8,14 +8,20 @@ public class PlayerCrouch : MonoBehaviour
     private PlayerData data;
     private bool isCrouched;
     private SpriteRenderer sprRender;
-    private BoxCollider2D bCollider;
+    private CapsuleCollider2D bCollider;
     public GameObject tester;
     private GameObject testerInstance;
+    public float crouched_collider_size;
+    private float stand_collider_size;
+    public float crouched_collider_offset;
+    private float stand_collider_offset;
     // Start is called before the first frame update
     void Start()
     {
         testerInstance = Instantiate(tester,this.gameObject.transform);
-        bCollider = GetComponent<BoxCollider2D>();
+        bCollider = GetComponent<CapsuleCollider2D>();
+        stand_collider_size = bCollider.size.y;
+        stand_collider_offset = bCollider.offset.y;
         data = this.GetComponent<PlayerMove>().data;
         //TODO : Animator and no sprite
         sprRender = GetComponent<SpriteRenderer>();
@@ -40,16 +46,16 @@ public class PlayerCrouch : MonoBehaviour
         }
     }
 
-    private void cutCollider(BoxCollider2D collider)
+    private void cutCollider(CapsuleCollider2D collider)
     {
-        collider.size = new Vector2(collider.size.x,(collider.size.y)/2);
-        collider.offset = new Vector2(collider.offset.x, - collider.size.y / 2);
+        collider.size = new Vector2(collider.size.x,crouched_collider_size);
+        collider.offset = new Vector2(collider.offset.x, crouched_collider_offset);
     }
 
-    private void unCutCollider(BoxCollider2D collider)
+    private void unCutCollider(CapsuleCollider2D collider)
     {
-        collider.size = new Vector2(collider.size.x, (collider.size.y) *2);
-        collider.offset = Vector2.zero;
+        collider.size = new Vector2(collider.size.x, stand_collider_size);
+        collider.offset = new Vector2(collider.offset.x, stand_collider_offset);
     }
 
 }
