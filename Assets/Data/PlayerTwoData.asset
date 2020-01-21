@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3da17cd786969774f8c4b47f63b7e069, type: 3}
   m_Name: PlayerTwoData
   m_EditorClassIdentifier: 
+  vie: 3
   walkSpeed: 8
   sprintSpeed: 1.95
   HorizontalAxisName: HorizontalTwo

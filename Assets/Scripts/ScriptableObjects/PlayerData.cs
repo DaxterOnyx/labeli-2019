@@ -4,6 +4,8 @@
 
 public class PlayerData : ScriptableObject
 {
+    [Header("General")]
+    public int vie;
 	public float walkSpeed;
 	public float sprintSpeed;
 	public string HorizontalAxisName;
