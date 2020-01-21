@@ -32,13 +32,13 @@ public class PlayerCrouch : MonoBehaviour
     void Update()
     {
         //TODO : Crouch system
-        if(data.Crouch && Input.GetAxis(data.VerticalAxisName) < 0 && !isCrouched)
+        if(data.Crouch && Input.GetButton(data.crouchButton) && !isCrouched)
         {
             isCrouched = true;
             sprRender.sprite = data.CrouchSprite;
             cutCollider(bCollider);
         }
-        else if(isCrouched && Input.GetAxis(data.VerticalAxisName) >= 0 && !testerInstance.GetComponent<triggerGesture>().entered)
+        else if(isCrouched && !Input.GetButton(data.crouchButton) && !testerInstance.GetComponent<triggerGesture>().entered)
         {
             sprRender.sprite = staySprite;
             unCutCollider(bCollider);

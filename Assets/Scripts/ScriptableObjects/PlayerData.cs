@@ -17,6 +17,7 @@ public class PlayerData : ScriptableObject
 	public bool Crouch;
 	//TODO : Animator and remove Sprite system
 	public Sprite CrouchSprite;
+    public string crouchButton;
 	[Header("Punch")]
 	//TODO : Punch level and wallbreak
 	public bool Punch;

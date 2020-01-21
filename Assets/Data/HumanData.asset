@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3da17cd786969774f8c4b47f63b7e069, type: 3}
-  m_Name: PlayerTwoData
+  m_Name: HumanData
   m_EditorClassIdentifier: 
-  vie: 3
+  HealthPoints: 0
   walkSpeed: 8
   sprintSpeed: 1.95
   HorizontalAxisName: HorizontalTwo
@@ -22,8 +22,10 @@ MonoBehaviour:
   AirControlRatio: 0.5
   Crouch: 1
   CrouchSprite: {fileID: 21300000, guid: dec4089d0c20ee2438a7800c8f67b8e3, type: 3}
+  crouchButton: Crouch
   Punch: 0
   PunchSprite: {fileID: 0}
+  CanGrabWall: 0
   jumpForce: 10
   JumpPressDuration: 0.2
   JumpHeightCurve:

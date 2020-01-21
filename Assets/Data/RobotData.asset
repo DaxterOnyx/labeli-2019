@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3da17cd786969774f8c4b47f63b7e069, type: 3}
-  m_Name: PlayerOneData
+  m_Name: RobotData
   m_EditorClassIdentifier: 
-  vie: 3
+  HealthPoints: 0
   walkSpeed: 5
   sprintSpeed: 1.95
   HorizontalAxisName: HorizontalOne
@@ -22,8 +22,10 @@ MonoBehaviour:
   AirControlRatio: 0.5
   Crouch: 0
   CrouchSprite: {fileID: 0}
+  crouchButton: Crouch
   Punch: 1
   PunchSprite: {fileID: 0}
+  CanGrabWall: 0
   jumpForce: 15
   JumpPressDuration: 0
   JumpHeightCurve:
