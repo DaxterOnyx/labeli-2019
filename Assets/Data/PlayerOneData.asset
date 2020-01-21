@@ -16,14 +16,36 @@ MonoBehaviour:
   sprintSpeed: 1.95
   HorizontalAxisName: HorizontalOne
   VerticalAxisName: VerticalOne
-  jumpForce: 15
   TimeJumpBeforeGrounded: 0.2
   TimeJumpAfterGrounded: 0.2
   AirControlRatio: 0.5
-  crouch: 1
-  punch: 0
-  crouchSprite: {fileID: 21300000, guid: dec4089d0c20ee2438a7800c8f67b8e3, type: 3}
-  punchSprite: {fileID: 0}
-  PlateformLayer:
+  Crouch: 1
+  CrouchSprite: {fileID: 21300000, guid: dec4089d0c20ee2438a7800c8f67b8e3, type: 3}
+  Punch: 0
+  PunchSprite: {fileID: 0}
+  jumpForce: 15
+  JumpPressDuration: 0.2
+  JumpHeightCurve:
     serializedVersion: 2
-    m_Bits: 256
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 1
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
