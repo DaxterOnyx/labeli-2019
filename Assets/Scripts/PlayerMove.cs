@@ -25,11 +25,14 @@ public class PlayerMove : MonoBehaviour
 	{
 		float deltaTime = Time.deltaTime;
 		x = Input.GetAxis(data.HorizontalAxisName);
-		//TODO Less horizontal direction when fall
-		//TODO less linear drag when fall
+        if(x > 0) { transform.rotation = new Quaternion(0, 0, 0, 0); }
 
-		//TODO analogic jump
-		jumpPressedRememberTime -= deltaTime;
+        else if (x < 0) { transform.rotation = new Quaternion(0, 180, 0, 0); }
+        //TODO Less horizontal direction when fall
+        //TODO less linear drag when fall
+
+        //TODO analogic jump
+        jumpPressedRememberTime -= deltaTime;
 		if (Input.GetAxis(data.VerticalAxisName) > 0)
 			jumpPressedRememberTime = data.TimeJumpBeforeGrounded;
 
