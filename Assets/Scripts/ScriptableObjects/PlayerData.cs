@@ -4,8 +4,8 @@
 
 public class PlayerData : ScriptableObject
 {
-    [Header("General")]
-    public int vie;
+	[Header("General")]
+	public int HealthPoints;
 	public float walkSpeed;
 	public float sprintSpeed;
 	public string HorizontalAxisName;
@@ -21,6 +21,8 @@ public class PlayerData : ScriptableObject
 	//TODO : Punch level and wallbreak
 	public bool Punch;
 	public Sprite PunchSprite;
+	[Header("GrabWall")]
+	public bool CanGrabWall;
 	[Header("More press more jump.")]
 	public float jumpForce;
 	public float JumpPressDuration;

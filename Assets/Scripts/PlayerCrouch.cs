@@ -22,7 +22,7 @@ public class PlayerCrouch : MonoBehaviour
         bCollider = GetComponent<CapsuleCollider2D>();
         stand_collider_size = bCollider.size.y;
         stand_collider_offset = bCollider.offset.y;
-        data = this.GetComponent<PlayerMove>().data;
+        data = this.GetComponent<PlayerController>().data;
         //TODO : Animator and no sprite
         sprRender = GetComponent<SpriteRenderer>();
         staySprite = this.GetComponent<SpriteRenderer>().sprite;
