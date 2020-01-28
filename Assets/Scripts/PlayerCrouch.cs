@@ -6,7 +6,7 @@ public class PlayerCrouch : MonoBehaviour
 {
     private Sprite staySprite;
     private PlayerData data;
-    private bool isCrouched;
+    internal bool isCrouched;
     private SpriteRenderer sprRender;
     private CapsuleCollider2D bCollider;
     public GameObject tester;
